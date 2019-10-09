@@ -20,8 +20,8 @@ def callback():
     json_line = request.get_json()
     json_line = json.dumps(json_line)
     decoded = json.loads(json_line)
-    user = decoded['originalDetectIntentRequest']['payload']['data']['replyToken']
-    userText = decoded['queryResult']['intent']['displayName']
+    User = decoded['originalDetectIntentRequest']['payload']['data']['replyToken']
+    UserText = decoded['queryResult']['intent']['displayName']
     #sentText(user,userText)
    if (userText == 'อยู่ป่าว') :
       sendText(user, 'อยู่สิ')
